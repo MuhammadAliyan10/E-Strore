@@ -1,0 +1,54 @@
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 1rem;
+}
+
+.container-fluid {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  justify-content: space-between;
+}
+
+.bar button {
+  position: relative;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  z-index: 9999;
+  transition: 0.3s;
+}
+
+.main__logo h4 {
+  margin: 0;
+  font-size: 1.5rem;
+}
+
+.cart .dropdown {
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+}
+.dropdown-toggle::after {
+  display: none;
+}
+.dropdown {
+  border: none !important;
+}
+.dropdown-menu {
+  display: none !important;
+}
+
+.cart .dropdown a i {
+  color: #666;
+  font-size: 21px;
+  transition: 0.3s;
+  &:hover {
+    color: #c8a165;
+  }
+}
+.cart .dropdown a:hover .dropdown-menu {
+  display: block;
+}

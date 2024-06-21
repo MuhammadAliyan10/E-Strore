@@ -1,0 +1,27 @@
+[data-theme="light"] {
+  --background-color: #ffffff;
+  --secondary--bg: #f6f6f6;
+  --main-heading: #444444;
+  --secondary-heading: #c86f65;
+}
+
+[data-theme="dark"] {
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  background-color: var(--background-color);
+}
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Montserrat", sans-serif;
+}
+p,
+a {
+  font-family: "Lato", sans-serif;
+}
