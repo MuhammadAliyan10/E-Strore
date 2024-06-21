@@ -2,9 +2,26 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 1rem;
+  padding: 3rem 2rem;
 }
 
+.cart a {
+  position: relative;
+}
+.card__count {
+  position: absolute;
+  width: 15px;
+  height: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 10px;
+  color: #fff;
+  border-radius: 50%;
+  background-color: #c8a165;
+  top: -11px;
+  right: -10px;
+}
 .container-fluid {
   display: flex;
   align-items: center;
@@ -26,29 +43,46 @@
   font-size: 1.5rem;
 }
 
-.cart .dropdown {
-  background: none;
-  border: none;
-  font-size: 1.5rem;
-}
-.dropdown-toggle::after {
-  display: none;
-}
-.dropdown {
-  border: none !important;
-}
-.dropdown-menu {
-  display: none !important;
+.cart {
+  position: relative;
 }
 
-.cart .dropdown a i {
+.cart a i {
   color: #666;
   font-size: 21px;
   transition: 0.3s;
-  &:hover {
-    color: #c8a165;
-  }
 }
-.cart .dropdown a:hover .dropdown-menu {
-  display: block;
+
+.cart a i:hover {
+  color: #c8a165;
+}
+
+.cart:hover .card__details {
+  opacity: 1;
+  max-height: 500px; /* Ensure this value is large enough to fit the content */
+  transform: translateY(0%);
+  visibility: visible; /* Ensure visibility is set */
+}
+
+.card__details {
+  position: absolute;
+  background-color: white;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  padding: 1rem;
+  width: 300px;
+  top: 100%;
+  right: 0;
+  z-index: 10;
+  opacity: 0;
+  max-height: 0;
+  overflow: hidden;
+  transform: translateY(100%);
+  transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
+  visibility: hidden; /* Hide the element */
+}
+
+.additional__buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 1rem;
 }
