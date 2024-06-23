@@ -5,7 +5,7 @@ const Sidebar = ({ status }) => {
   return (
     <div className={`sidebar ${status ? "show" : "hide"}`}>
       <ul>
-        <li>
+        <li className="active">
           <a href="#">Home</a>
         </li>
         <li>

@@ -2,12 +2,24 @@
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 3rem 2rem;
+  padding: 1rem 2rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  transition: background-color 0.3s ease;
+  margin-bottom: 4rem;
+}
+
+.navbar.scrolled {
+  background-color: black;
 }
 
 .cart a {
   position: relative;
 }
+
 .card__count {
   position: absolute;
   width: 15px;
@@ -22,6 +34,7 @@
   top: -11px;
   right: -10px;
 }
+
 .container-fluid {
   display: flex;
   align-items: center;
