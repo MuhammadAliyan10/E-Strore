@@ -1,12 +1,29 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Sidebar from "./Sidebar";
 import "../assets/Css/Navbar.css";
 
 const Navbar = () => {
   const [sidebar, setSidebar] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
+
+  const handleScroll = () => {
+    const offset = window.scrollY;
+    if (offset > 50) {
+      setScrolled(true);
+    } else {
+      setScrolled(false);
+    }
+  };
+
+  useEffect(() => {
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
 
   return (
-    <div className="navbar">
+    <div className={`navbar ${scrolled ? "scrolled" : ""}`}>
       <div className="container-fluid">
         <div className="bar">
           {sidebar ? (
@@ -18,7 +35,6 @@ const Navbar = () => {
               <i className="fa-solid fa-bars"></i>
             </button>
           )}
-
           <Sidebar status={sidebar} />
         </div>
         <div className="main__logo">

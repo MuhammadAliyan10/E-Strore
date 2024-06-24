@@ -72,9 +72,9 @@
 
 .cart:hover .card__details {
   opacity: 1;
-  max-height: 500px; /* Ensure this value is large enough to fit the content */
+  max-height: 500px;
   transform: translateY(0%);
-  visibility: visible; /* Ensure visibility is set */
+  visibility: visible;
 }
 
 .card__details {
@@ -91,7 +91,7 @@
   overflow: hidden;
   transform: translateY(100%);
   transition: opacity 0.3s ease, transform 0.3s ease, max-height 0.3s ease;
-  visibility: hidden; /* Hide the element */
+  visibility: hidden;
 }
 
 .additional__buttons {
